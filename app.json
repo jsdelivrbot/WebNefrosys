@@ -1,0 +1,58 @@
+{
+  "name": "NefrosysWeb",
+  "description": "Nefrosys.",
+  "keywords": [
+    "dialisis",
+    "sofwtare",
+    "clinica"
+  ],
+  "website": "https://www.nefrosys.com.ar",
+  "repository": "https://github.com/Sope87/WebNefrosys.git",
+  "logo": "https://github.com/Sope87/WebNefrosys/blob/master/img/icono.ico",
+  "success_url": "/index.html",
+  "scripts": {
+    "postdeploy": "Nefrosys"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "Performance-M"
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    "openredis",
+    {
+      "plan": "mongolab:shared-single-small",
+      "as": "MONGO"
+    },
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/Sope87/WebNefrosys.git"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
+}
