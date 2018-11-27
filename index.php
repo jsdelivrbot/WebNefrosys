@@ -160,7 +160,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; NefroSys 2016</p>
+            <p> NefroSys 2013</p>
         </div>
     </footer>
 
