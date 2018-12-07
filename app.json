@@ -3,6 +3,6 @@
   "name": "NefroSys",
   "description": "Nefrosys web",
   "repository": "https://github.com/Sope87/WebNefrosys",
-  "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-sample/public/node.svg",
   "keywords": ["dialisis", "software", "clinicas"]
 }
